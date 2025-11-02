@@ -1,8 +1,11 @@
+import 'package:doctor_appointment_app/core/route/route_extension.dart';
 import 'package:doctor_appointment_app/core/themes/colors_manager.dart';
+import 'package:doctor_appointment_app/core/widgets/app_button.dart';
 import 'package:doctor_appointment_app/features/onboarding/widget/logo_and_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../core/route/routes.dart';
 import '../../core/themes/font_styles_manager.dart';
 import 'widget/doctor_photo_and_text.dart';
 
@@ -64,20 +67,11 @@ class GetStartedButton extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       height: 56.h,
-      child: ElevatedButton(
-        onPressed: () {},
-        style: ElevatedButton.styleFrom(
-          backgroundColor: ColorsManager.primaryColor,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(16.r),
-          ),
-        ),
-        child: Text(
-          'Get Started',
-          style: FontStylesManager.font18Medium.copyWith(
-            color: Colors.white,
-          ),
-        ),
+      child: AppButton(
+        onPressed: () {
+          context.pushReplacementNamed(Routes.login);
+        },
+        text: 'Get Started',
       ),
     );
   }
