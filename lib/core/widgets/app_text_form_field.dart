@@ -38,7 +38,7 @@ class AppTextFormField extends StatelessWidget {
       controller: controller,
       obscureText: isObscureText ?? false,
       style: inputTextStyle ?? FontStylesManager.font14Medium.copyWith(
-        color: ColorsManager.DarkBlueColor,
+        color: ColorsManager.darkBlueColor,
       ),
       decoration:  InputDecoration(
          isDense: true,

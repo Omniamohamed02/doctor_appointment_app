@@ -24,7 +24,7 @@ import '../../../../core/themes/font_styles_manager.dart';
                  TextSpan(
                    text: 'Terms and Conditions',
                    style: FontStylesManager.font11Regular.copyWith(
-                     color: ColorsManager.DarkBlueColor,
+                     color: ColorsManager.darkBlueColor,
                    ),
                  ),
                  TextSpan(
@@ -41,7 +41,7 @@ import '../../../../core/themes/font_styles_manager.dart';
            Center(
              child: Text('Privacy Policy.',
                 style: FontStylesManager.font11Regular.copyWith(
-                  color: ColorsManager.DarkBlueColor)),
+                  color: ColorsManager.darkBlueColor)),
            )
          ],
        )

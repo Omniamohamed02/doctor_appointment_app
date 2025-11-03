@@ -1,8 +1,10 @@
+import 'package:doctor_appointment_app/core/route/route_extension.dart';
 import 'package:doctor_appointment_app/core/widgets/app_button.dart';
 import 'package:doctor_appointment_app/features/login/ui/widgets/terms_and_conditions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../../../core/route/routes.dart';
 import '../../../core/widgets/auth_column_text.dart';
 import 'widgets/donot_have_account.dart';
 import 'widgets/email_and_password.dart';
@@ -32,9 +34,11 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: 20.h,),
                 TermsAndConditions(),
                 SizedBox(height: 20.h,),
-                DonotHaveAccount(),
+                DonotHaveAccount(onTap: () { 
+                 context.pushNamed(Routes.signup);
+                 }, text: 'Don\'t have an account?', screenName: 'Sign Up',),
 
-          
+        
               ],
               
             ),
