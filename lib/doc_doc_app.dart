@@ -1,6 +1,5 @@
 import 'package:doctor_appointment_app/core/route/app_router.dart';
 import 'package:doctor_appointment_app/core/themes/colors_manager.dart';
-import 'package:doctor_appointment_app/features/onboarding/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

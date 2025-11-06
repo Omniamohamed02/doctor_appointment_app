@@ -29,20 +29,33 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   cupertino_icons: ^1.0.8
+  dio: ^5.9.0
   flutter:
     sdk: flutter
     #to make splash screen
   flutter_native_splash: ^2.4.7
+  #A flutter plugin for adapting screen and font size.Guaranteed to look good on different models
+  flutter_screenutil: ^5.9.3
   #an svg rendering package
   flutter_svg: ^2.2.1
-   #A flutter plugin for adapting screen and font size.Guaranteed to look good on different models
-  flutter_screenutil: ^5.9.3
-
+  freezed: ^3.2.3
+  freezed_annotation: ^3.1.0
+  get_it: ^8.3.0
+  json_annotation: ^4.9.0
+  pretty_dio_logger: ^1.4.0
+  retrofit: ^4.9.0
+  retrofit_generator: ^10.1.2
+  #Converts already built widgets into skeleton loaders with no extra effort.
+  skeletonizer: ^2.1.0+1
+  flutter_bloc: ^9.1.1
+  flutter_secure_storage: ^9.2.4
 
 dev_dependencies:
+  build_runner: ^2.10.1
   flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
+  json_serializable: ^6.11.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

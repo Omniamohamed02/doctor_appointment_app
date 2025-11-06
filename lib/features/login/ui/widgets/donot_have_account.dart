@@ -1,12 +1,13 @@
-import 'package:doctor_appointment_app/core/route/route_extension.dart';
 import 'package:doctor_appointment_app/core/themes/colors_manager.dart';
 import 'package:doctor_appointment_app/core/themes/font_styles_manager.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/route/routes.dart';
 
 class DonotHaveAccount extends StatelessWidget {
-  const DonotHaveAccount({super.key});
+  const DonotHaveAccount({super.key, required this.onTap, required this.text, required this.screenName});
+  final VoidCallback onTap;
+  final String text;
+  final String screenName;
 
   @override
   Widget build(BuildContext context) {
@@ -14,17 +15,19 @@ class DonotHaveAccount extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          "Don't have an account? ",
+          text,
+         // "Don't have an account? ",
           style: FontStylesManager.font12Regular.copyWith(
-            color: ColorsManager.DarkBlueColor,
+            color: ColorsManager.darkBlueColor,
           ),
         ),
-        GestureDetector(
-          onTap: () {
-           context.pushNamed(Routes.signup);
-          },
+        TextButton(
+          onPressed: () { 
+            onTap();
+           },
           child: Text(
-            'Sign Up',
+            screenName,
+           // 'Sign Up',
             style: FontStylesManager.font12Regular.copyWith(
               color: ColorsManager.primaryBlueColor,
             ),
