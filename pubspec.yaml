@@ -48,6 +48,7 @@ dependencies:
   #Converts already built widgets into skeleton loaders with no extra effort.
   skeletonizer: ^2.1.0+1
   flutter_bloc: ^9.1.1
+  flutter_secure_storage: ^9.2.4
 
 dev_dependencies:
   build_runner: ^2.10.1

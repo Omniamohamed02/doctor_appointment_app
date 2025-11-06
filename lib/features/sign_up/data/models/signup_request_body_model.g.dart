@@ -1,7 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-// ignore_for_file: unused_element
-
 part of 'signup_request_body_model.dart';
 
 // **************************************************************************
@@ -13,7 +11,7 @@ SignupRequestBodyModel _$SignupRequestBodyModelFromJson(
 ) => SignupRequestBodyModel(
   username: json['name'] as String?,
   email: json['email'] as String?,
-  phoneNumber: (json['phone'] as num?)?.toInt(),
+  phoneNumber: json['phone'] as String?,
   gender: (json['gender'] as num?)?.toInt(),
   password: json['password'] as String?,
   confirmPassword: json['password_confirmation'] as String?,

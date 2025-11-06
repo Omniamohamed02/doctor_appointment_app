@@ -7,7 +7,7 @@ class SignupRequestBodyModel {
   final String? username;
   final String ?email;
   @JsonKey(name: 'phone')
-  final int ?phoneNumber;
+  final String ?phoneNumber;
   final int ?gender;
   final String ? password;
   @JsonKey(name: 'password_confirmation')

@@ -1,7 +1,10 @@
 import 'package:doctor_appointment_app/core/route/route_extension.dart';
 import 'package:doctor_appointment_app/core/widgets/app_button.dart';
+import 'package:doctor_appointment_app/features/login/logic/cubit/login_cubit.dart';
+import 'package:doctor_appointment_app/features/login/ui/widgets/login_bloc_listener.dart';
 import 'package:doctor_appointment_app/features/login/ui/widgets/terms_and_conditions.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/route/routes.dart';
@@ -30,14 +33,17 @@ class LoginScreen extends StatelessWidget {
                 SizedBox(height: 40.h,),
                 EmailAndPassword(),
                 SizedBox(height: 60.h,),
-                AppButton(onPressed: (){}, text:'Login'),
+                AppButton(onPressed: (){
+                  validateThenDoLogin(context);
+
+                }, text:'Login'),
                 SizedBox(height: 20.h,),
                 TermsAndConditions(),
                 SizedBox(height: 20.h,),
                 DonotHaveAccount(onTap: () { 
                  context.pushNamed(Routes.signup);
                  }, text: 'Don\'t have an account?', screenName: 'Sign Up',),
-
+                 LoginBlocListener(),
         
               ],
               
@@ -48,3 +54,9 @@ class LoginScreen extends StatelessWidget {
       );
   }
 }
+void validateThenDoLogin(BuildContext context) {
+    if (context.read<LoginCubit>().formKey.currentState!.validate()) {
+      context.read<LoginCubit>().emitLoginStates();
+      
+    }
+  }
