@@ -45,5 +45,13 @@ class FontStylesManager {
   fontSize: 18.sp,
   fontWeight: FontWeight.w500,
  );
+ static  TextStyle font18Bold = TextStyle(
+  fontSize: 18.sp,
+  fontWeight: FontWeight.bold,
+ );
+ static  TextStyle font18SemiBold = TextStyle(
+  fontSize: 18.sp,
+  fontWeight: FontWeight.w600,
+ );
 }
 

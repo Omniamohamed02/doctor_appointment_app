@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:doctor_appointment_app/core/network/api_service.dart';
 import 'package:doctor_appointment_app/core/network/dio_factory.dart';
-import 'package:doctor_appointment_app/features/login/data/repo/login_repo.dart';
-import 'package:doctor_appointment_app/features/login/logic/cubit/login_cubit.dart';
-import 'package:doctor_appointment_app/features/sign_up/data/repo/signup_repo.dart';
-import 'package:doctor_appointment_app/features/sign_up/logic/cubit/signup_cubit.dart';
+import 'package:doctor_appointment_app/features/auth/login/data/repo/login_repo.dart';
+import 'package:doctor_appointment_app/features/auth/login/logic/cubit/login_cubit.dart';
+import 'package:doctor_appointment_app/features/auth/sign_up/data/repo/signup_repo.dart';
+import 'package:doctor_appointment_app/features/auth/sign_up/logic/cubit/signup_cubit.dart';
 import 'package:get_it/get_it.dart';
 
 final getIt = GetIt.instance;

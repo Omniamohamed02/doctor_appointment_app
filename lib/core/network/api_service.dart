@@ -1,8 +1,8 @@
 import 'package:doctor_appointment_app/core/network/network_constant.dart';
-import 'package:doctor_appointment_app/features/login/data/models/login_request_body_model.dart';
-import 'package:doctor_appointment_app/features/login/data/models/login_response_model.dart';
-import 'package:doctor_appointment_app/features/sign_up/data/models/signup_request_body_model.dart';
-import 'package:doctor_appointment_app/features/sign_up/data/models/signup_response_model.dart';
+import 'package:doctor_appointment_app/features/auth/login/data/models/login_request_body_model.dart';
+import 'package:doctor_appointment_app/features/auth/login/data/models/login_response_model.dart';
+import 'package:doctor_appointment_app/features/auth/sign_up/data/models/signup_request_body_model.dart';
+import 'package:doctor_appointment_app/features/auth/sign_up/data/models/signup_response_model.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:dio/dio.dart';
 part 'api_service.g.dart';

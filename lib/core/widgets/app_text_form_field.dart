@@ -1,5 +1,6 @@
 import 'package:doctor_appointment_app/core/themes/font_styles_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../themes/colors_manager.dart';
 
@@ -15,7 +16,8 @@ class AppTextFormField extends StatelessWidget {
   final Color? backgroundColor;
   final TextEditingController? controller;
   final Function(String?) validator;
-
+  final TextInputType ? keyboardType;
+ 
   const AppTextFormField({
     super.key,
     required this.hintText,
@@ -29,11 +31,13 @@ class AppTextFormField extends StatelessWidget {
     this.hintStyle,
     this.backgroundColor,
     required this.validator,
+     this.keyboardType, 
   });
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: keyboardType?? TextInputType.text,
       validator: (value) => validator(value),
       controller: controller,
       obscureText: isObscureText ?? false,
